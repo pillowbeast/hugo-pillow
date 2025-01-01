@@ -1,12 +1,16 @@
 # hugo-PillowTheme
 
-This repository offers an example site for the [Pillow Theme](https://google.com)
+This branch of the repository offers an example site for the [Pillow Theme](https://github.com/pillowbeast/hugo-pillow-theme/tree/main)
 
 ## Usage
 
 To have a look at the example site, clone this repository (branch *exampleSite*) and run the following commands:
 
 ```bash
+git clone https://github.com/pillowbeast/hugo-pillow-theme.git
+cd hugo-pillow-theme
+git checkout exampleSite
+git submodule update --init --recursive
 hugo server
 ```
 
