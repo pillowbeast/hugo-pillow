@@ -1,0 +1,8 @@
+name = "Pillow Theme"
+author = "Yannik Werner"
+description = "Template for personal website with a collection of personal projects, recipes, books, a CV and blog entries."
+version = "2.1.0"
+license = "MIT"
+# homepage = "https://github.com/ywerner/pillow-theme"
+# min_version = "0.55.0"
+# tags = ["personal", "blog", "portfolio"]

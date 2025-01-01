@@ -1,0 +1,11 @@
+<div class="back-and-forth-button-container">
+  {{ $currentSection := .Section }}
+  {{ $sectionPages := where .Site.RegularPages "Section" $currentSection }}
+  {{ $sortedSectionPages := sort $sectionPages "Date.Unix" "desc" }}
+  {{ $current := . }}
+  {{ $prev := (where $sortedSectionPages "RelPermalink" "lt" $current.RelPermalink) | first 1 }}
+  {{ $next := (where $sortedSectionPages "RelPermalink" "gt" $current.RelPermalink) | last 1 }}
+  
+  <a href="{{ if $next }}{{ (index $next 0).RelPermalink }}{{ end }}" class="{{ if not $next }}not-active{{ end }}">❮</a>
+  <a href="{{ if $prev }}{{ (index $prev 0).RelPermalink }}{{ end }}" class="{{ if not $prev }}not-active{{ end }}">❯</a>
+</div>

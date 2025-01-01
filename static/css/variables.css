@@ -1,0 +1,33 @@
+/* =========== Variables (CSS Custom Properties) =========== */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --shadow-color: #7f7b82;
+
+    --light-olive-green: #8ED6CB;
+    --dark-purple: #461561;
+    --light-purple: #8F45A5;
+    --lightest-purple: #c18cd1;
+    --dark-olive-green: #348071;
+
+    --font-primary: 'Teko', sans-serif;
+    --font-secondary: 'AzeretMono', monospace;
+
+    /* Spacing */
+    --view-width: 125rem;
+    --extra-special-space: 12.2rem;
+    --special-space: 6.3rem;
+    --enough-space: 3.9rem;
+    --standard-space: 2.4rem;
+    --minimal-space: 1.2rem;
+}
+
+/* Dark theme variables */
+body.dark {
+    --background-color: #201f1f;
+    --text-color: #ffffff;
+    --shadow-color: #7f7b82;
+
+    --light-olive-green: #8ED6CB;
+    --light-purple: #8F45A5;
+}

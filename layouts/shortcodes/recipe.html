@@ -1,0 +1,59 @@
+<hr>
+<div class="recipe" id="jump-to-here">
+  <div class="r-metadata-container">
+    <div class="r-metadata">
+      <h2>{{ .Page.Title }}</h2>
+      <div class="recipe-data-line">
+        <div class="r-metadata-entry">
+          <div class="icon">
+            <img class="no-overlay" src='{{ "/icons/clock-solid.svg" | relURL }}' alt="Clock">
+          </div>
+          <p>{{ .Page.Params.cookDetails.totalTime }}</p>
+        </div>
+        <div class="r-metadata-entry">
+          <div class="icon">
+            <img class="no-overlay" src='{{ "/icons/utensils-solid.svg" | relURL }}' alt="Difficulty">
+          </div>
+          <p>{{ .Page.Params.cookDetails.difficulty }}</p>
+        </div>
+        <div class="r-metadata-entry">
+          <div class="icon">
+            <img class="no-overlay" src='{{ "/icons/users-solid.svg" | relURL }}' alt="Servings">
+          </div>
+          <p>{{ .Page.Params.cookDetails.servings }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="r-img">
+      {{ with .Page.Resources.GetMatch .Page.Params.image }}
+      <img src="{{ .RelPermalink }}" alt="Recipe Image">
+      {{ else }}
+      <p>No image provided.</p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<hr>
+<div class="ingredients_and_steps">
+  <div class="ingredients">
+    <h3>Ingredients</h3>
+    {{ range .Page.Params.ingredients }}
+    <div class="ingredient">
+      <div class="ingredient-amount">
+        <b>{{ .amount }}</b>
+      </div>
+      <div class="ingredient-name">
+        <p>{{ .name }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  <div class="recipe-steps">
+    <h3>Steps</h3>
+    <ol>
+      {{ range .Page.Params.steps }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ol>
+  </div>
+</div>

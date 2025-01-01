@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="main-container">
+  <h1>{{ .Page.Title }}</h1>
+  <p class="page-summary">{{ .Page.Params.description }}</p>
+  <hr class="first-hr">
+
+  {{ range (sort .Pages "Date" "desc") }}
+  <div class="retro-entry">
+    <p class="retro-date">{{ .Date.Format "Jan 2006" }}</p>
+    <a href='{{ .RelPermalink }}'>
+      <h2 class="retro-title">{{ .Title }}</h2>
+    </a>
+    <p class="retro-summary">{{ .Summary }}</p>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}

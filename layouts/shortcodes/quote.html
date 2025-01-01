@@ -1,0 +1,11 @@
+{{ $content := .Get "content" | default "no content" }}
+
+{{ if $content }}
+<!-- <hr> -->
+  <p class="quote"> {{ $content }}</p>
+<!-- <hr> -->
+{{ else }}
+<hr>
+  <p>No content found.</p>
+<hr>
+{{ end }}

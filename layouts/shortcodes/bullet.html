@@ -1,0 +1,6 @@
+{{ $content := .Get "content" }}
+{{ $extrainfo := .Get "extra-info" }}
+<ul class="bullet">
+  <li>{{ $content }}</li>
+  <p>{{ $extrainfo }}</p>
+</ul>
