@@ -1,8 +1,11 @@
-name = "Pillow Theme"
+name = "Hugo Pillow Theme"
 author = "Yannik Werner"
-description = "Template for personal website with a collection of personal projects, recipes, books, a CV and blog entries."
-version = "2.1.0"
+description = "A modern and minimal Hugo theme for blogs and portfolios with a collection of projects, recipes, books, a CV and blog entries."
+version = "1.0.2"
 license = "MIT"
-# homepage = "https://github.com/ywerner/pillow-theme"
-# min_version = "0.55.0"
-# tags = ["personal", "blog", "portfolio"]
+homepage = "https://github.com/pillowbeast/hugo-pillow-theme"
+min_version = "0.88.0"
+tags = ["personal", "blog", "portfolio", "minimal", "modern", "projects", "recipes", "books", "cv", "blog-entries"]
+features = ["dark mode", "responsive design"]
+exampleSite = "exampleSite"
+

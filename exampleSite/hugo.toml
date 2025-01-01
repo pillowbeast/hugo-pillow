@@ -1,6 +1,6 @@
 title = "My Blog"
 languageCode = "en-us"
-theme = "pillow"
+theme = "hugo-pillow-theme"
 
 [params]
     # primaryColor = 
