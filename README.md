@@ -26,8 +26,8 @@ Finally we copy the `hugo.toml` to the root of the new hugo page.
 hugo new site <mynewhugopage>
 cd <mynewhugopage>
 git init
-git submodule add <url> themes/hugo-pillow-theme
-cp themes/hugo-pillow-theme/hugo.toml .
+git submodule add <url> themes/hugo-pillow
+cp themes/hugo-pillow/hugo.toml .
 hugo server
 ```
 
