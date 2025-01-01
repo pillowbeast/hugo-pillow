@@ -1,0 +1,25 @@
+title = "My Blog"
+languageCode = "en-us"
+theme = "hugo-pillow"
+
+[params]
+    # primaryColor = 
+    # secondaryColor = 
+    # footerText = "© 2021 Florian Meyer. All rights reserved."
+    description = "Hello there!"
+    [params.contact]
+        name = "Florian Meyer"
+        email = "florian.meyer@email.com"
+        phone = "+00 000 00 00"
+        adress = "New York, United States"
+    [params.profiles]
+        spotify = "https://spotify.com"
+        github = "https://github.com"
+        linkedin = "https://linkedin.com"
+        email = "mailto:florian.meyer@email.com"
+
+ignoreLogs = ["warning-goldmark-raw-html"]
+
+[markup]
+    [markup.highlight]
+        style = "rose-pine-dawn"
