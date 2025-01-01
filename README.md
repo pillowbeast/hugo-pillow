@@ -1,6 +1,6 @@
-# hugo-PillowTheme
+# Hugo Pillow Theme
 
-This branch of the repository offers an example site for the [Pillow Theme](https://github.com/pillowbeast/hugo-pillow/tree/main)
+This branch of the repository offers an example site for the [Pillow Theme](https://github.com/pillowbeast/hugo-pillow/tree/main).
 
 ## Usage
 
