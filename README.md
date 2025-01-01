@@ -1,54 +1,89 @@
-# Get Started
+# hugo-PillowTheme
 
-To get started with using the theme we start by creating a new hugo page. 
-After that we initialize our git repository and add the theme as a submodule.
-Finally we copy the `config.toml` from the exampleSite to the root of the new hugo page.
+This repository offers an example site for the [Pillow Theme](https://google.com)
+
+## Usage
+
+To have a look at the example site, clone this repository (branch *exampleSite*) and run the following commands:
 
 ```bash
-hugo new site <mynewhugopage>
-cd <mynewhugopage>
-git init
-git submodule add <url> themes/hugo-pillow-theme
-cp themes/hugo-pillow-theme/exampleSite/hugo.toml .
 hugo server
 ```
-## Example content
 
-Have a look at the example content of the theme.
-Clone theme into the themes folder of your new hugo page.
-Then run the hugo server from within exampleSite.
+## Directory Structure
 
-```bash
-cd themes/hugo-pillow-theme/exampleSite
-hugo server --theme ../..
 ```
-
-# Configuration
-
-You can change a lot of the theme's settings in the `hugo.toml` file.
-- primary,secondarycolor
-- contact information
-- social media links
-- ...
-
-# Content
-
-The following types of content are supported:
-- blog
-- projects
-- retrospectives
-- about
-- recipes
-- books
-
-You can find examples of each in the `content` folder of the exampleSite.
-
-# Shortcodes
-
-The following shortcodes are available:
-- gallery
-- metadata
-- recipe
-- bulletpoints
-- quotes
-- inline-images
+hugo-pillow-theme
+├─ LICENSE
+├─ README.md
+├─ content
+│  ├─ _index.md
+│  ├─ about
+│  │  ├─ images
+│  │  │  └─ person.webp
+│  │  └─ index.md
+│  ├─ blog
+│  │  ├─ _index.md
+│  │  └─ why-i-love-gardening
+│  │     ├─ images
+│  │     │  └─ gardening_cover.webp
+│  │     └─ index.md
+│  ├─ book
+│  │  ├─ _index.md
+│  │  ├─ friendship
+│  │  │  ├─ images
+│  │  │  │  └─ friendship_cover.webp
+│  │  │  └─ index.md
+│  │  └─ gardening
+│  │     ├─ images
+│  │     │  └─ gardening_cover.webp
+│  │     └─ index.md
+│  ├─ gallery
+│  │  ├─ book_1.webp
+│  │  ├─ dish.webp
+│  │  ├─ marathon_fans.png
+│  │  ├─ marathon_finish.png
+│  │  ├─ rocket_1.png
+│  │  └─ runner.png
+│  ├─ project
+│  │  ├─ _index.md
+│  │  ├─ build-rocket
+│  │  │  ├─ images
+│  │  │  │  ├─ rocket_1.png
+│  │  │  │  ├─ rocket_2.png
+│  │  │  │  └─ rocket_cover.png
+│  │  │  └─ index.md
+│  │  └─ half-marathon-lucerne
+│  │     ├─ images
+│  │     │  ├─ marathon_even_more_runners.png
+│  │     │  ├─ marathon_fans.png
+│  │     │  ├─ marathon_finish.png
+│  │     │  ├─ marathon_more_runners.png
+│  │     │  ├─ marathon_struggle.png
+│  │     │  ├─ runner_face.png
+│  │     │  └─ title-image.png
+│  │     └─ index.md
+│  ├─ recipe
+│  │  ├─ Pasta_and_Pesto
+│  │  │  ├─ images
+│  │  │  │  └─ Pasta_and_Pesto.jpg
+│  │  │  └─ index.md
+│  │  ├─ Spagetthi_Bolognese
+│  │  │  ├─ images
+│  │  │  │  ├─ Pasta_and_Pesto.jpg
+│  │  │  │  └─ spaghetti_bolognese.webp
+│  │  │  └─ index.md
+│  │  └─ _index.md
+│  └─ retro
+│     ├─ 2024_10
+│     │  └─ index.md
+│     ├─ 2024_11
+│     │  └─ index.md
+│     ├─ 2024_12
+│     │  └─ index.md
+│     └─ _index.md
+├─ hugo.toml
+├─ theme.toml
+└─ themes
+   └─ hugo-pillow-theme
+```

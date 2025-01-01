@@ -1,0 +1,3 @@
+[submodule "themes/hugo-pillow-theme"]
+	path = themes/hugo-pillow-theme
+	url = https://github.com/pillowbeast/hugo-pillow-theme.git
