@@ -1,14 +1,14 @@
 # hugo-PillowTheme
 
-This branch of the repository offers an example site for the [Pillow Theme](https://github.com/pillowbeast/hugo-pillow-theme/tree/main)
+This branch of the repository offers an example site for the [Pillow Theme](https://github.com/pillowbeast/hugo-pillow/tree/main)
 
 ## Usage
 
 To have a look at the example site, clone this repository (branch *exampleSite*) and run the following commands:
 
 ```bash
-git clone https://github.com/pillowbeast/hugo-pillow-theme.git
-cd hugo-pillow-theme
+git clone https://github.com/pillowbeast/hugo-pillow.git
+cd hugo-pillow
 git checkout exampleSite
 git submodule update --init --recursive
 hugo server
@@ -17,7 +17,7 @@ hugo server
 ## Directory Structure
 
 ```
-hugo-pillow-theme
+hugo-pillow
 ├─ LICENSE
 ├─ README.md
 ├─ content
@@ -89,5 +89,5 @@ hugo-pillow-theme
 ├─ hugo.toml
 ├─ theme.toml
 └─ themes
-   └─ hugo-pillow-theme
+   └─ hugo-pillow
 ```
