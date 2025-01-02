@@ -1,5 +1,5 @@
 ---
-title: "My Blog"
+title: "Hugo Pillow"
 description: "A personal space for thoughts, ideas, and experiments."
 draft: false
 ---
