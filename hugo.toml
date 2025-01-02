@@ -1,7 +1,7 @@
 title = "Pillow"
 languageCode = "en-us"
 theme = "hugo-pillow"
-baseURL = "https://pillowbeast.github.io/hugo-Pillow/"
+baseURL = "https://pillowbeast.github.io/hugo-pillow/"
 
 [params]
     [params.costumisation]
