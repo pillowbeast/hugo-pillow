@@ -1,19 +1,32 @@
 <footer>
   <div class="footer-container">
-    <p>Crafted with ❤︎ in Zurich.</p>
+    <p>{{ .Site.Params.costumisation.footerText | default "Crafted with ❤︎ in Zurich." }}</p>
     <div class="footer-icons">
-      <a href='{{ .Site.Params.profiles.spotify }}' target="_blank" rel="noopener" class="icon">
-        <img src='{{ "/icons/spotify.svg" | relURL }}' , alt="Spotify">
+      {{ with .Site.Params.profiles.spotify }}
+      <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
+        <img src='{{ "/icons/spotify.svg" | relURL }}' alt="Spotify">
       </a>
-      <a href='{{ .Site.Params.profiles.github }}' target="_blank" rel="noopener" class="icon">
-        <img src='{{ "/icons/github.svg" | relURL }}' , alt="GitHub">
+      {{ end }}
+      {{ with .Site.Params.profiles.github }}
+      <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
+        <img src='{{ "/icons/github.svg" | relURL }}' alt="GitHub">
       </a>
-      <a href='{{ .Site.Params.profiles.linkedin }}' target="_blank" rel="noopener" class="icon">
-        <img src='{{ "/icons/linkedin.svg" | relURL }}' , alt="LinkedIn">
+      {{ end }}
+      {{ with .Site.Params.profiles.linkedin }}
+      <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
+        <img src='{{ "/icons/linkedin.svg" | relURL }}' alt="LinkedIn">
       </a>
-      <a href='{{ .Site.Params.profiles.email }}' target="_blank" rel="noopener" class="icon">
-        <img src='{{ "/icons/envelope-solid.svg" | relURL }}' , alt="Email">
+      {{ end }}
+      {{ with .Site.Params.profiles.instagram }}
+      <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
+        <img src='{{ "/icons/instagram.svg" | relURL }}' alt="Instagram">
       </a>
+      {{ end }}
+      {{ with .Site.Params.profiles.email }}
+      <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
+        <img src='{{ "/icons/envelope-solid.svg" | relURL }}' alt="Email">
+      </a>
+      {{ end }}
     </div>
   </div>
 </footer>

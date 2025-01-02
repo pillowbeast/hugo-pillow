@@ -24,7 +24,7 @@ h1 {
 
 h1::after {
   content: ".";
-  color: var(--light-olive-green);
+  color: var(--primary-color);
 }
 
 h2 {
@@ -35,13 +35,13 @@ h2 {
 
 h2::after {
   content: ".";
-  color: var(--light-olive-green);
+  color: var(--primary-color);
 }
 
 h3 {
   font-size: 3.9rem;
   font-weight: 500;
-  color: var(--light-olive-green);
+  color: var(--primary-color);
 }
 
 p,
@@ -78,7 +78,7 @@ a b {
 
   h1::after {
     content: ".";
-    color: var(--light-olive-green);
+    color: var(--primary-color);
   }
 
   h2 {
@@ -159,7 +159,7 @@ ol {
 
 ol li::marker {
   font-weight: 500;
-  color: var(--light-purple);
+  color: var(--secondary-color);
 }
 
 ol p {
@@ -173,20 +173,20 @@ li {
 }
 
 a:hover {
-  color: var(--light-purple);
+  color: var(--secondary-color);
 }
 
 a h2:hover {
-  color: var(--light-purple);
-  /* color: var(--light-olive-green); */
+  color: var(--secondary-color);
+  /* color: var(--primary-color); */
 }
 
 a h3:hover {
-  color: var(--light-purple);
+  color: var(--secondary-color);
 }
 
 a b:hover {
-  color: var(--light-purple);
+  color: var(--secondary-color);
 }
 
 .quote {
@@ -196,7 +196,7 @@ a b:hover {
   padding-left: calc(2*var(--enough-space));
   padding-right: var(--enough-space);
 
-  color: var(--light-olive-green);
+  color: var(--primary-color);
   /* font-style: italic; */
 }
 
@@ -237,7 +237,7 @@ button img {
 hr {
   border: none;
   height: 2px;
-  background-color: var(--light-olive-green);
+  background-color: var(--primary-color);
   margin-top: var(--special-space);
   margin-bottom: var(--special-space);
 }
@@ -245,7 +245,7 @@ hr {
 .first-hr {
   border: none;
   height: 2px;
-  background-color: var(--light-olive-green);
+  background-color: var(--primary-color);
 }
 
 .full-width-hr {
@@ -290,7 +290,7 @@ details {
 }
 
 summary::marker {
-  color: var(--light-purple);
+  color: var(--secondary-color);
 }
 
 /* =========== Attributes =========== */
@@ -332,7 +332,7 @@ summary::marker {
 }
 
 .active {
-  color: var(--light-olive-green);
+  color: var(--primary-color);
 }
 
 .left-squished {

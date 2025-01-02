@@ -7,6 +7,14 @@
   <link rel="apple-touch-icon" href='{{ "/favicon_io/apple-touch-icon.png" | relURL }}'>
   <link rel="icon" type="image/png" sizes="192x192" href='{{ "/favicon_io/android-chrome-192x192.png" | relURL }}'>
   <link rel="icon" type="image/png" sizes="512x512" href='{{ "/favicon_io/android-chrome-512x512.png" | relURL }}'>
+  <!-- Dynamic CSS Variables -->
+  <style>
+    :root {
+      --primary-color: {{ .Site.Params.costumisation.primaryColor | default "#3498db" }};
+      --secondary-color: {{ .Site.Params.costumisation.secondaryColor | default "#2ecc71" }};
+      --footer-text: "{{ .Site.Params.costumisation.footerText | default "Powered by Hugo" }}";
+    }
+  </style>
   <link rel="stylesheet" href='{{ "/css/main.css" | relURL }}'>
   {{ $jscript := resources.Get "js/main.js" | js.Build | resources.Minify | resources.Fingerprint }}
   <script type="module" src="{{ $jscript.Permalink }}"></script>

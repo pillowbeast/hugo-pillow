@@ -1,22 +1,38 @@
-title = "My Blog"
+title = "Pillow"
 languageCode = "en-us"
 theme = "hugo-pillow"
+baseURL = "https://pillowbeast.github.io/hugo-Pillow/"
 
 [params]
-    # primaryColor = 
-    # secondaryColor = 
-    # footerText = "© 2021 Florian Meyer. All rights reserved."
-    description = "Hello there!"
+    [params.costumisation]
+        primaryColor = "#8ED6CB"
+        secondaryColor = "#8F45A5"
+        footerText = "Crafted with ❤︎ in Zurich."
     [params.contact]
-        name = "Florian Meyer"
-        email = "florian.meyer@email.com"
+        name = "Pillowbeast"
+        email = "pillowbeast@email.com"
         phone = "+00 000 00 00"
-        adress = "New York, United States"
+        adress = "Zurich, Switzerland"
+    # Add your social media links here, these will be added to the footer.
     [params.profiles]
-        spotify = "https://spotify.com"
-        github = "https://github.com"
-        linkedin = "https://linkedin.com"
-        email = "mailto:florian.meyer@email.com"
+        spotify = "https://https://open.spotify.com/user/pillowbeast"
+        github = "https://github.com/pillowbeast"
+        # linkedin = "https://linkedin.com"
+        # email = "mailto:pillowbeast@email.com"
+        # instagram = "https://instagram.com"
+
+# TODO: implement settings
+# [settings]
+#     ShowShareButtons = true
+#     ShowReadingTime = true
+#     displayFullLangName = true
+#     ShowPostNavLinks = true
+#     ShowBreadCrumbs = true
+#     ShowCodeCopyButtons = true
+#     ShowRssButtonInSectionTermList = true
+#     ShowAllPagesInArchive = true
+#     ShowPageNums = true
+#     ShowToc = true
 
 ignoreLogs = ["warning-goldmark-raw-html"]
 

@@ -44,8 +44,8 @@ header nav {
 }
 
 header nav a:hover {
-    /* color: var(--light-olive-green); */
-    color: var(--light-purple);
+    /* color: var(--primary-color); */
+    color: var(--secondary-color);
 }
 
 .menu-button {
@@ -104,7 +104,7 @@ header nav a:hover {
 
     background: none;
     border: none;
-    color: var(--light-olive-green);
+    color: var(--primary-color);
     font-size: 7.2rem;
     cursor: pointer;
     rotate: -90deg;
@@ -114,7 +114,7 @@ header nav a:hover {
 }
 
 #move-up-button:hover {
-    color: var(--light-purple);
+    color: var(--secondary-color);
 }
 
 /* =========== MoveDownButton =========== */
@@ -125,7 +125,7 @@ header nav a:hover {
 
     background: none;
     border: none;
-    color: var(--light-olive-green);
+    color: var(--primary-color);
     font-size: 7.2rem;
     cursor: pointer;
     rotate: -90deg;
@@ -135,7 +135,7 @@ header nav a:hover {
 }
 
 #move-down-button:hover {
-    color: var(--light-purple);
+    color: var(--secondary-color);
 }
 
 /* =========== Main Content =========== */
@@ -277,9 +277,9 @@ img.faded {
     transform: translateY(-50%);
 
     font-size: 7.2rem;
-    color: var(--light-olive-green);
-    /* background: var(--light-purple); */
-    /* border-left: 2px solid var(--light-purple); */
+    color: var(--primary-color);
+    /* background: var(--secondary-color); */
+    /* border-left: 2px solid var(--secondary-color); */
 }
 
 .next-button {
@@ -291,17 +291,17 @@ img.faded {
     transform: translateY(-50%);
 
     font-size: 7.2rem;
-    color: var(--light-olive-green);
-    /* background: var(--light-purple); */
+    color: var(--primary-color);
+    /* background: var(--secondary-color); */
     /* border: none; */
-    /* border-right: 8px solid var(--light-purple); */
+    /* border-right: 8px solid var(--secondary-color); */
 
 }
 
 .prev-button:hover,
 .next-button:hover {
     cursor: pointer;
-    color: var(--dark-purple);
+    color: var(--secondary-color);
 }
 
 .position-indicator {
@@ -323,7 +323,7 @@ img.faded {
     width: 1.8rem;
     height: 1.8rem;
     border-radius: 1.8rem;
-    background-color: var(--light-olive-green);
+    background-color: var(--primary-color);
 }
 
 .small-circle:hover {
@@ -331,7 +331,7 @@ img.faded {
 }
 
 .small-circle.active {
-    background-color: var(--dark-purple);
+    background-color: var(--secondary-color);
 }
 
 /* =========== Book Report Summary =========== */
@@ -394,11 +394,11 @@ img.faded {
 .book-report-a {
     background: none;
     border: none;
-    color: var(--light-olive-green);
+    color: var(--primary-color);
 }
 
 .book-report-a:hover {
-    color: var(--light-purple);
+    color: var(--secondary-color);
 }
 
 
@@ -409,7 +409,7 @@ img.faded {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 4px 4px 12px var(--light-olive-green);
+    box-shadow: 4px 4px 12px var(--primary-color);
 }
 
 .book-report-img {
@@ -455,7 +455,7 @@ img.faded {
     max-width: 100vw;
     margin-top: calc(-1 * var(--standard-space));
     margin-bottom: var(--standard-space);
-    background-color: var(--light-olive-green);
+    background-color: var(--primary-color);
 
     display: flex;
     flex-direction: row;
@@ -548,7 +548,7 @@ img.faded {
 
 .recipe-container2 {
     width: 45%;
-    box-shadow: 4px 4px 12px var(--light-olive-green);
+    box-shadow: 4px 4px 12px var(--primary-color);
 
     display: flex;
     flex-direction: column;
@@ -570,11 +570,11 @@ img.faded {
 .recipe-a {
     background: none;
     border: none;
-    color: var(--light-olive-green);
+    color: var(--primary-color);
 }
 
 .recipe-a:hover {
-    color: var(--light-purple);
+    color: var(--secondary-color);
 }
 
 @media (max-width: 900px) {
@@ -733,7 +733,7 @@ img.faded {
 }
 
 .ingredient-amount {
-    color: var(--light-purple);
+    color: var(--secondary-color);
 }
 
 .recipe-ingredients-img {
@@ -798,7 +798,7 @@ img.faded {
 .blog-img {
     width: 30%;
 
-    box-shadow: 4px 4px 12px var(--light-olive-green);
+    box-shadow: 4px 4px 12px var(--primary-color);
 
     display: flex;
     justify-content: center;
@@ -821,7 +821,7 @@ img.faded {
 }
 
 .blog-date {
-    color: var(--light-olive-green);
+    color: var(--primary-color);
     line-height: 1.0;
     padding-bottom: 0rem;
     padding-left: 0rem;
@@ -886,7 +886,7 @@ img.faded {
     grid-column: 1;
     grid-row: 1;
 
-    color: var(--light-olive-green);
+    color: var(--primary-color);
     line-height: 1.0;
     padding: 0rem;
 }
@@ -950,11 +950,11 @@ img.faded {
 
     line-height: 1.0;
     font-size: 7.2rem;
-    color: var(--light-olive-green);
+    color: var(--primary-color);
 }
 
 .back-and-forth-button-container a:hover {
-    color: var(--light-purple);
+    color: var(--secondary-color);
 }
 
 
@@ -990,7 +990,7 @@ img.faded {
     /* margin-top: var(--enough-space); */
     margin-bottom: var(--special-space);
 
-    background-color: var(--light-olive-green);
+    background-color: var(--primary-color);
 
     display: flex;
     flex-direction: row;
@@ -1104,7 +1104,7 @@ img.faded {
     height: 100%;
     margin-bottom: 70px;
 
-    background-color: var(--light-olive-green);
+    background-color: var(--primary-color);
 }
 
 .timeline-item {
@@ -1119,7 +1119,7 @@ img.faded {
     width: 40px;
     height: 40px;
 
-    background-color: var(--light-olive-green);
+    background-color: var(--primary-color);
     border-radius: 50%;
     border: 5px solid var(--background-color);
 }
@@ -1192,7 +1192,7 @@ img.faded {
 
     background-color: var(--background-color);
     border-radius: 50%;
-    border: 2px solid var(--light-olive-green);
+    border: 2px solid var(--primary-color);
 }
 
 .CV {
@@ -1258,7 +1258,7 @@ img.faded {
 .img-container p {
     width: auto;
     font-size: var(--standard-space);
-    color: var(--light-purple);
+    color: var(--secondary-color);
     font-style: italic;
     padding-top: var(--minimal-space);
     padding-bottom: var(--minimal-space);
@@ -1390,7 +1390,7 @@ footer {
     justify-content: center;
 
     font-weight: 700;
-    border-top: 5px solid var(--light-olive-green);
+    border-top: 5px solid var(--primary-color);
 }
 
 .footer-container {
