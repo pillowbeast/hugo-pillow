@@ -26,4 +26,4 @@ This website serves as a repository for reflections, insights, and stories. It i
 
 ## Conclusion
 
-This space is for anyone who enjoys diving into a mix of personal musings and creative explorations. It’s an ongoing journey, with much more to come!
+This space is for anyone who enjoys diving into a mix of personal musings and creative explorations. It’s an ongoing journey, with much more to come! Action trial.
