@@ -1,10 +1,12 @@
 # Hugo Pillow Theme
 
-This branch of the repository offers an example site for the [Pillow Theme](https://github.com/pillowbeast/hugo-pillow/tree/main).
+This branch of the repository offers an example site for the [Pillow Theme](https://github.com/pillowbeast/hugo-pillow/tree/main). It is a good starting point for development to start with this setup and deploy it locally.
+
+You can also have a look at the Demo page on [GitHub Pages](https://pillowbeast.github.io/hugo-pillow/).
 
 ## Usage
 
-To have a look at the example site, clone this repository (branch *exampleSite*) and run the following commands:
+To build the example site locally, clone this repository (branch *exampleSite*) and run the following commands:
 
 ```bash
 git clone https://github.com/pillowbeast/hugo-pillow.git
