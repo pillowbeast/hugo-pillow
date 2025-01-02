@@ -13,13 +13,13 @@
       
       <nav>
         <a href="{{ "blog/" | absURL }}">Blog</a>
-        <a href="{{ "/retro/" | relURL }}">Retro</a>
-        <a href="{{ "/project/" | relURL }}"/>Project</a>
-        <a href="{{ "/book/" | relURL }}">Book</a>
-        <a href="{{ "/recipe/" | relURL }}">Recipe</a>
-        <a href="{{ "/about/" | relURL }}">About</a>
+        <a href="{{ "retro/" | absURL }}">Retro</a>
+        <a href="{{ "project/" | absURL }}"/>Project</a>
+        <a href="{{ "book/" | absURL }}">Book</a>
+        <a href="{{ "recipe/" | absURL }}">Recipe</a>
+        <a href="{{ "about/" | absURL }}">About</a>
       </nav>
-      <button class="menu-button icon">
+      <button class="menu-button">
         <img src='{{ "icons/bars-solid.svg" | absURL }}' alt="menu">
       </button>
     </div>

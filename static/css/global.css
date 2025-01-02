@@ -298,6 +298,10 @@ summary::marker {
   filter: invert(1) brightness(1.2);
 }
 
+.dark .menu-button img {
+  filter: invert(1) brightness(1.2);
+}
+
 .not-visible {
   opacity: 0;
   cursor: default;

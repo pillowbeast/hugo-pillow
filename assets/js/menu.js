@@ -11,10 +11,10 @@ export function toggleMenu() {
 
 export function markActiveMenu() {
     const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('header nav a'); // Adjust the selector if needed
-
+    const navLinks = document.querySelectorAll('header nav a');
     navLinks.forEach(link => {
-        if (currentPath.startsWith(link.getAttribute('href'))) {
+        const linkPath = new URL(link.href).pathname;
+        if (currentPath.startsWith(linkPath)) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
