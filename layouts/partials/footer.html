@@ -4,27 +4,27 @@
     <div class="footer-icons">
       {{ with .Site.Params.profiles.spotify }}
       <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
-        <img src='{{ "/icons/spotify.svg" | relURL }}' alt="Spotify">
+        <img src='{{ "icons/spotify.svg" | absURL }}' alt="Spotify">
       </a>
       {{ end }}
       {{ with .Site.Params.profiles.github }}
       <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
-        <img src='{{ "/icons/github.svg" | relURL }}' alt="GitHub">
+        <img src='{{ "icons/github.svg" | absURL }}' alt="GitHub">
       </a>
       {{ end }}
       {{ with .Site.Params.profiles.linkedin }}
       <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
-        <img src='{{ "/icons/linkedin.svg" | relURL }}' alt="LinkedIn">
+        <img src='{{ "icons/linkedin.svg" | absURL }}' alt="LinkedIn">
       </a>
       {{ end }}
       {{ with .Site.Params.profiles.instagram }}
       <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
-        <img src='{{ "/icons/instagram.svg" | relURL }}' alt="Instagram">
+        <img src='{{ "icons/instagram.svg" | absURL }}' alt="Instagram">
       </a>
       {{ end }}
       {{ with .Site.Params.profiles.email }}
       <a href='{{ . }}' target="_blank" rel="noopener" class="icon">
-        <img src='{{ "/icons/envelope-solid.svg" | relURL }}' alt="Email">
+        <img src='{{ "icons/envelope-solid.svg" | absURL }}' alt="Email">
       </a>
       {{ end }}
     </div>

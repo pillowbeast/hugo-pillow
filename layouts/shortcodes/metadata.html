@@ -4,7 +4,7 @@
     <div class="metadata-entry">
       <p>{{ .Format "02.01.2006" }}</p>
       <div class="icon">
-        <img class="no-overlay" src='{{ "/icons/calendar-solid.svg" | relURL }}' alt="Calendar-Date">
+        <img class="no-overlay" src='{{ "icons/calendar-solid.svg" | absURL }}' alt="Calendar-Date">
       </div>
     </div>
   {{ end }}
@@ -12,7 +12,7 @@
     <div class="metadata-entry">
       <p>{{ . }} min</p>
       <div class="icon">
-        <img class="no-overlay" src='{{ "/icons/hourglass-half-solid.svg" | relURL }}' alt="Length">
+        <img class="no-overlay" src='{{ "icons/hourglass-half-solid.svg" | absURL }}' alt="Length">
       </div>
     </div>
   {{ end }}
@@ -20,7 +20,7 @@
     <div class="metadata-entry">
       <p>{{ . }}</p>
       <div class="icon">
-        <img class="no-overlay" src='{{ "/icons/pen-solid.svg" | relURL }}' alt="Author">
+        <img class="no-overlay" src='{{ "icons/pen-solid.svg" | absURL }}' alt="Author">
       </div>
     </div>
   {{ end }}
@@ -28,7 +28,7 @@
     <div class="metadata-entry">
       <p>{{ . }}</p>
       <div class="icon">
-        <img class="no-overlay" src='{{ "/icons/star-solid.svg" | relURL }}' alt="Rating">
+        <img class="no-overlay" src='{{ "icons/star-solid.svg" | absURL }}' alt="Rating">
       </div>
     </div>
   {{ end }}

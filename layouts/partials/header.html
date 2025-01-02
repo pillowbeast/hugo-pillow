@@ -6,21 +6,21 @@
         </a>
         <button class="dark-mode-toggle icon" >
           <img alt="DarkMode" id="dark-mode-toggle-img"
-            data-moon='{{ "/icons/moon-solid.svg" | relURL }}' 
-            data-sun='{{ "/icons/sun-solid.svg" | relURL }}' >
+            data-moon='{{ "icons/moon-solid.svg" | absURL }}' 
+            data-sun='{{ "icons/sun-solid.svg" | absURL }}' >
         </button>
       </div>
       
       <nav>
-        <a href="{{ "/blog/" | relURL }}">Blog</a>
-        <a href="{{ "/retro/" | relURL }}">Retro</a>
-        <a href="{{ "/project/" | relURL }}"/>Project</a>
-        <a href="{{ "/book/" | relURL }}">Book</a>
-        <a href="{{ "/recipe/" | relURL }}">Recipe</a>
-        <a href="{{ "/about/" | relURL }}">About</a>
+        <a href="{{ 'blog/' | absURL }}">Blog</a>
+        <a href="{{ '/retro/' | relURL }}">Retro</a>
+        <a href="{{ '/project/' | relURL }}"/>Project</a>
+        <a href="{{ '/book/' | relURL }}">Book</a>
+        <a href="{{ '/recipe/' | relURL }}">Recipe</a>
+        <a href="{{ '/about/' | relURL }}">About</a>
       </nav>
       <button class="menu-button icon">
-        <img src='{{ "/icons/bars-solid.svg" | relURL }}' alt="menu">
+        <img src='{{ "icons/bars-solid.svg" | absURL }}' alt="menu">
       </button>
     </div>
 </header>

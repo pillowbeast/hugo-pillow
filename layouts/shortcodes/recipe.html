@@ -6,19 +6,19 @@
       <div class="recipe-data-line">
         <div class="r-metadata-entry">
           <div class="icon">
-            <img class="no-overlay" src='{{ "/icons/clock-solid.svg" | relURL }}' alt="Clock">
+            <img class="no-overlay" src='{{ "icons/clock-solid.svg" | absURL }}' alt="Clock">
           </div>
           <p>{{ .Page.Params.cookDetails.totalTime }}</p>
         </div>
         <div class="r-metadata-entry">
           <div class="icon">
-            <img class="no-overlay" src='{{ "/icons/utensils-solid.svg" | relURL }}' alt="Difficulty">
+            <img class="no-overlay" src='{{ "icons/utensils-solid.svg" | absURL }}' alt="Difficulty">
           </div>
           <p>{{ .Page.Params.cookDetails.difficulty }}</p>
         </div>
         <div class="r-metadata-entry">
           <div class="icon">
-            <img class="no-overlay" src='{{ "/icons/users-solid.svg" | relURL }}' alt="Servings">
+            <img class="no-overlay" src='{{ "icons/users-solid.svg" | absURL }}' alt="Servings">
           </div>
           <p>{{ .Page.Params.cookDetails.servings }}</p>
         </div>
