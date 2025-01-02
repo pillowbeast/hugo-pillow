@@ -1,8 +1,8 @@
-<h1 align=center>Hugo Pillow Theme<br><a href="https://pillowbeast.gtihub.io" rel="nofollow">Demo</a></h1>
+<h1 align=center>Hugo Pillow Theme<br><a href="https://pillowbeast.github.io/hugo-pillow/" rel="nofollow">Demo</a></h1>
 <h2 align=center>🌟 Modern | 🌙 Minimal | 📱 Fully Responsive</h2>
 <br>
 
-**ExampleSite** can be found here: [**exampleSite**](https://github.com/pillowbeast/hugo-pillow/tree/exampleSite). The demo is built using this example configuration.
+**ExampleSite** can be found here: [**exampleSite**](https://github.com/pillowbeast/hugo-pillow/). The demo is built using this example configuration.
 
 [![Minimum Hugo Version](https://img.shields.io/static/v1?label=min-HUGO-version&message=>=v0.88.0&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.88.0)
 [![GitHub License](https://img.shields.io/github/license/pillowbeast/hugo-pillow)](https://github.com/pillowbeast/hugo-pillow/blob/main/LICENSE)
