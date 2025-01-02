@@ -7,6 +7,8 @@
     --font-primary: 'Teko', sans-serif;
     --font-secondary: 'AzeretMono', monospace;
 
+    --meaningful-variable: "hello";
+
     /* Spacing */
     --view-width: 125rem;
     --extra-special-space: 12.2rem;

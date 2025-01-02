@@ -20,6 +20,8 @@ jobs:
 
     - name: Update theme submodule to latest main commit
       run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
         git submodule update --remote themes/hugo-pillow
         git add themes/hugo-pillow
         git commit -m "Update theme submodule to latest main commit" || echo "No changes to commit"
