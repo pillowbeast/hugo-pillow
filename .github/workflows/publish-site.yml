@@ -5,6 +5,11 @@ on:
     branches:
       - exampleSite # Trigger on changes to exampleSite
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Update Hugo Theme in ExampleSite
+    types:
+      - completed
 
 jobs:
   build-and-deploy:
