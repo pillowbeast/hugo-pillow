@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - exampleSite # Trigger on changes to exampleSite
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
