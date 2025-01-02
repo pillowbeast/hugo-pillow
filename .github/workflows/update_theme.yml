@@ -1,0 +1,29 @@
+name: Update Hugo Theme in ExampleSite
+
+on:
+  push:
+    branches:
+      - main # Trigger when changes are pushed to the main branch
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout ExampleSite branch
+      uses: actions/checkout@v3
+      with:
+        ref: exampleSite # Checkout the exampleSite branch
+        submodules: true # Ensure submodules are initialized
+        fetch-depth: 0 # Fetch all history for submodules
+
+    - name: Update theme submodule to latest main commit
+      run: |
+        git submodule update --remote themes/<theme-folder-name>
+        git add themes/<theme-folder-name>
+        git commit -m "Update theme submodule to latest main commit" || echo "No changes to commit"
+
+    - name: Push changes to ExampleSite
+      run: git push origin exampleSite
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
