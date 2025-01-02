@@ -1,0 +1,33 @@
+name: Publish Hugo Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - exampleSite # Trigger on changes to exampleSite
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout exampleSite branch
+      uses: actions/checkout@v3
+      with:
+        ref: exampleSite
+        submodules: true # Ensure submodules are initialized
+        fetch-depth: 0 # Fetch all history for submodules
+
+    - name: Set up Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest' # Specify a specific version if needed
+
+    - name: Build Hugo Site
+      run: hugo --minify
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./public
