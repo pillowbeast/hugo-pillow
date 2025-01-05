@@ -1,5 +1,5 @@
 ---
-title: "Hugo Pillow"
+title: "Pillow"
 description: "A personal space for thoughts, ideas, and experiments."
 draft: false
 ---
