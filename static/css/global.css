@@ -116,7 +116,7 @@ a b {
 }
 
 h1 {
-  padding-top: var(--extra-special-space);
+  padding-top: var(--special-space);
   padding-bottom: var(--enough-space);
 }
 
