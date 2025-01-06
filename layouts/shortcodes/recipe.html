@@ -37,14 +37,19 @@
 <div class="ingredients_and_steps">
   <div class="ingredients">
     <h3>Ingredients</h3>
-    {{ range .Page.Params.ingredients }}
-    <div class="ingredient">
-      <div class="ingredient-amount">
-        <b>{{ .amount }}</b>
+    {{ range $category, $ingredients := .Page.Params.ingredients }}
+    <div class="ingredient-category">
+      <h4>{{ $category | humanize }}</h4>
+      {{ range $ingredients }}
+      <div class="ingredient">
+        <div class="ingredient-amount">
+          <b>{{ .amount }}</b>
+        </div>
+        <div class="ingredient-name">
+          <p>{{ .name }}</p>
+        </div>
       </div>
-      <div class="ingredient-name">
-        <p>{{ .name }}</p>
-      </div>
+      {{ end }}
     </div>
     {{ end }}
   </div>

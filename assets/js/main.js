@@ -2,6 +2,7 @@ import { toggleMenu, markActiveMenu } from './menu.js';
 import { handleGalleries } from './galleryslider.js';
 import { handleMoveButtons } from './moveButtons.js';
 import { handleOverlay } from './overlay.js';
+import { adjustH1Size } from './adjusth1size.js';
 
 console.log('Menu module loaded');
 
@@ -39,4 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
     handleMoveButtons();
     handleGalleries();
     handleOverlay();
+    adjustH1Size();
 });
