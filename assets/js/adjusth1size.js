@@ -1,10 +1,9 @@
 export function adjustH1Size() {
     const title = document.querySelector('h1');
     const maxLength = 12; // Adjust this threshold as needed
-    const baseFontSize = 18.2; // Base font size in `rem`
     const scaleFactor = 0.2; // Adjust size reduction per extra character
-
     const textLength = title.textContent.length;
+    const baseFontSize = window.innerWidth < 900 ? 6.3 : 18.2;
 
     // Calculate new font size
     const newFontSize = Math.max(
@@ -14,4 +13,5 @@ export function adjustH1Size() {
 
     // Apply the calculated font size
     title.style.fontSize = `${newFontSize}rem`;
-};
+}
+

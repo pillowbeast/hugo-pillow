@@ -42,3 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     handleOverlay();
     adjustH1Size();
 });
+
+
+// Call adjustH1Size on window resize
+window.addEventListener('resize', adjustH1Size);
+
+// Call adjustH1Size initially to set the font size on page load
+adjustH1Size();
