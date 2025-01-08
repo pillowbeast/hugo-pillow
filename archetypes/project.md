@@ -2,7 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 metadata:
-  readingTime: 5
+  # readingTime: 5
 image: "images/default-project.png"
 summary: "Provide a brief summary of the project here."
 draft: true

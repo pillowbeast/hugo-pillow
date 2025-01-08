@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 
 metadata:
-  readingTime: 15
+  # readingTime: 15
   rating: "9/10"
 summary: "Provide a concise summary of the book's content and appeal."
 image: "images/default-book-cover.webp"

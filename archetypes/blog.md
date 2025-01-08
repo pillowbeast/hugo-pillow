@@ -2,7 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 metadata:
-  readingTime: 10
+  # readingTime: 10
   
 image: "images/default-blog.webp"
 summary: "Write a short summary of your blog post here."

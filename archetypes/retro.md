@@ -2,7 +2,7 @@
 title: "{{ replace .Name "-" " " | title }} Reflections"
 date: {{ .Date }}
 metadata:
-  readingTime: 15
+  # readingTime: 15
 summary: "Write a brief summary of the month's highlights and lessons."
 draft: true
 ---
