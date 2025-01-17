@@ -6,6 +6,8 @@ metadata:
 image: "images/default-project.png"
 summary: "Provide a brief summary of the project here."
 draft: true
+categories: []
+tags: []
 ---
 
 {{< metadata >}}

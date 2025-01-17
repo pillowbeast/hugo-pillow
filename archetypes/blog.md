@@ -7,6 +7,8 @@ metadata:
 image: "images/default-blog.webp"
 summary: "Write a short summary of your blog post here."
 draft: true
+categories: []
+tags: []
 ---
 
 {{< metadata >}}

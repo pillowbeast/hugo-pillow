@@ -23,6 +23,8 @@ steps:
   - "Step 3: Add details here."
 image: "images/default-recipe.jpg"
 draft: true
+categories: []
+tags: []
 ---
 
 {{< metadata >}}

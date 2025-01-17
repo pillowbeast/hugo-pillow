@@ -5,6 +5,8 @@ metadata:
   # readingTime: 15
 summary: "Write a brief summary of the month's highlights and lessons."
 draft: true
+categories: []
+tags: []
 ---
 
 {{< metadata >}}

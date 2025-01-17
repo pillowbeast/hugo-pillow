@@ -8,6 +8,8 @@ metadata:
 summary: "Provide a concise summary of the book's content and appeal."
 image: "images/default-book-cover.webp"
 draft: true
+categories: []
+tags: []
 ---
 
 {{< metadata >}}
