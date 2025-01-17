@@ -28,6 +28,8 @@ steps:
   - "Get depression"
 image: "images/Pasta_and_Pesto.jpg"
 draft: false
+categories: ["Dinner"]
+tags: ["Easy"]
 ---
 
 {{< metadata >}}
