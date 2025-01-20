@@ -36,6 +36,10 @@ Add another meaningful story or moment here.
 
 ***
 
+{{< spotify spotify_link="https://open.spotify.com/embed/track/7GhIk7Il098yCjg4BQjzvb" spotify_width="100%" spotify_height="152" spotify_border_radius="8px" >}}
+
+***
+
 ## Wrap-Up
 ### Achievements
 - List accomplishments or significant milestones.

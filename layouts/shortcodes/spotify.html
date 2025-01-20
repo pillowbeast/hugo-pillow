@@ -1,0 +1,38 @@
+{{ $spotify_link := .Get "spotify_link" | default
+"https://open.spotify.com/embed/track/5BfRL84y1LtmACz4UreC0S?utm_source=generator" }}
+{{ $spotify_width := .Get "spotify_width" | default "100%" }}
+{{ $spotify_border_radius := .Get "spotify_border_radius" | default "12px" }}
+
+{{ $spotify_theme := "" }}
+{{ with .Get "spotify_theme" }}
+    {{ if eq . "dark" }}
+        {{ $spotify_theme = "&theme=0" }}
+    {{ else }}
+        {{ $spotify_theme = "" }}
+    {{ end }}
+{{ end }}
+
+{{ $spotify_height := "152" }}
+{{ with .Get "spotify_type" }}
+    {{ if eq . "tall" }}
+        {{ $spotify_height = "352" }}
+    {{ else }}
+        {{ $spotify_height = "152" }}
+    {{ end }}
+{{ end }}
+
+{{ $spotify_height := "352" }}
+{{ with .Get "spotify_type" }}
+    {{ if eq . "tall" }}
+        {{ $spotify_height = "352" }}
+    {{ else }}
+        {{ $spotify_height = "152" }}
+    {{ end }}
+{{ end }}
+
+{{ $link := printf "%s%s" $spotify_link $spotify_theme }}
+
+<iframe style="border-radius:{{ $spotify_border_radius }}" src="{{ $link }}" width="{{ $spotify_width }}"
+    height="{{ $spotify_height }}" frameBorder="0" allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+</iframe>

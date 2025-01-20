@@ -31,6 +31,12 @@ cp themes/hugo-pillow/hugo.toml .
 hugo server
 ```
 
+## Add your first Page
+```bash
+hugo new notes/todo.md
+```
+
+
 # Configuration
 
 You can change a lot of the theme's settings in the `hugo.toml` file.
@@ -40,10 +46,18 @@ You can change a lot of the theme's settings in the `hugo.toml` file.
 - ...
 
 ## Code Highlighting
-Pillow comes with two styles, *rose-pine-dawn* for the light mode *nord* for the dark mode. If you want to change the syntax you have to modify the *syntax_light.css* and *syntax_dark.css*. For a gallery of different styles you can check-out: [Chroma style gallery](https://xyproto.github.io/splash/docs/all.html). To use a style run:
+Pillow comes with two styles, **rose-pine-dawn** for the light mode *nord* for the dark mode. If you want to change the syntax you have to modify the *syntax_light.css* and *syntax_dark.css*. For a gallery of different styles you can check-out: [Chroma style gallery](https://xyproto.github.io/splash/docs/all.html). To use a style run:
 
 ```bash
 hugo gen chromastyles --style=<chosen-style> > themes/hugo-pillow/static/syntax_<light or dark>.css
+```
+
+## Components
+
+### Spotify Component
+Go to Spotify Web Player and under Share of a song extract the link from the Embed Option. You can specify the theme (*light* or *dark*)
+```Go
+{{< spotify spotify_link="<spotify_link>" spotify_theme="light" spotify_width="100%" spotify_type="tall" spotify_border_radius="8px" >}}
 ```
 
 # Content
