@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .Name "-" " " | title }} Reflections"
+title: "{{ replace (replace .Name "-" " ") "_" " " | title }}"
 date: {{ .Date }}
 metadata:
   # readingTime: 15
