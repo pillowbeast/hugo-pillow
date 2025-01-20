@@ -24,7 +24,7 @@ steps:
 image: "images/default-recipe.jpg"
 draft: true
 categories: []
-tags: []
+tags: [Dinner, Pasta]
 ---
 
 {{< metadata >}}

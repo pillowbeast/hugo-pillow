@@ -1,9 +1,21 @@
 {{ define "main" }}
-  <div class="main-container">
-    <h1>{{ .Title }}</h1>
-    <p  class="page-summary">{{ .Params.description }}</p>
-    <hr class="first-hr">
+<div class="main-container">
+  <h1>{{ .Title }}</h1>
+  <p class="page-summary">{{ .Params.description }}</p>
+  <hr class="first-hr">
 
-    <div>{{ .Content }}</div>
+  <h2>Recent Posts</h2>
+  {{ range first 10 (sort .Site.RegularPages "Date" "desc") }}
+  <div class="post">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span class="type {{ .Section | lower }}-tag">
+      <a href='{{ "/" | relURL }}{{ .Section }}/'>{{ .Section }}</a>
+    </span>
   </div>
+  {{ end }}
+
+  <hr>
+
+  <div>{{ .Content }}</div>
+</div>
 {{ end }}

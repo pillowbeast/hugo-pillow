@@ -1,36 +1,73 @@
+{{ with .Page.Params.categories }}
+<div class="tags-and-categories">
+  <div class="tags">
+    <div class="icon">
+      <img class="no-overlay" src='{{ "icons/folder-solid.svg" | absURL }}' alt="Calendar-Date">
+    </div>
+    {{ range $index, $category := . }}
+    <p>{{ if gt $index 0 }}•{{ end }}</p>
+    <div class="category">
+      <p>
+        <a href="{{ " /categories/" | relURL }}{{ $category | urlize }}">{{ $category }}</a>
+      </p>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{ with .Page.Params.tags }}
+<div class="tags-and-categories">
+  <div class="categories">
+    <div class="icon">
+      <img class="no-overlay" src='{{ "icons/tag-solid.svg" | absURL }}' alt="Calendar-Date">
+    </div>
+    {{ range $index, $tag := . }}
+    <p>{{ if gt $index 0 }}•{{ end }}</p>
+    <div class="tag">
+      <p>
+        <a href="{{ " /tags/" | relURL }}{{ $tag | urlize }}">{{ $tag }}</a>
+      </p>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
 <div class="metadata-line">
   {{ with .Page.Date }}
-    {{ $parsedDate := . | time }}
-    <div class="metadata-entry">
-      <p>{{ .Format "02.01.2006" }}</p>
-      <div class="icon">
-        <img class="no-overlay" src='{{ "icons/calendar-solid.svg" | absURL }}' alt="Calendar-Date">
-      </div>
+  {{ $parsedDate := . | time }}
+  <div class="metadata-entry">
+    <div class="icon">
+      <img class="no-overlay" src='{{ "icons/calendar-solid.svg" | absURL }}' alt="Calendar-Date">
     </div>
+    <p>{{ .Format "02.01.2006" }}</p>
+  </div>
   {{ end }}
   {{ with .Page.Params.metadata.readingTime }}
-    <div class="metadata-entry">
-      <p>{{ . }} min</p>
-      <div class="icon">
-        <img class="no-overlay" src='{{ "icons/hourglass-half-solid.svg" | absURL }}' alt="Length">
-      </div>
+  <div class="metadata-entry">
+    <div class="icon">
+      <img class="no-overlay" src='{{ "icons/hourglass-half-solid.svg" | absURL }}' alt="Length">
     </div>
+    <p>{{ . }} min</p>
+  </div>
   {{ end }}
   {{ with .Page.Params.metadata.author }}
-    <div class="metadata-entry">
-      <p>{{ . }}</p>
-      <div class="icon">
-        <img class="no-overlay" src='{{ "icons/pen-solid.svg" | absURL }}' alt="Author">
-      </div>
+  <div class="metadata-entry">
+    <div class="icon">
+      <img class="no-overlay" src='{{ "icons/pen-solid.svg" | absURL }}' alt="Author">
     </div>
+    <p>{{ . }}</p>
+  </div>
   {{ end }}
   {{ with .Page.Params.metadata.rating }}
-    <div class="metadata-entry">
-      <p>{{ . }}</p>
-      <div class="icon">
-        <img class="no-overlay" src='{{ "icons/star-solid.svg" | absURL }}' alt="Rating">
-      </div>
+  <div class="metadata-entry">
+    <div class="icon">
+      <img class="no-overlay" src='{{ "icons/star-solid.svg" | absURL }}' alt="Rating">
     </div>
+    <p>{{ . }}</p>
+  </div>
   {{ end }}
 </div>
+
 <hr class="first-hr">
