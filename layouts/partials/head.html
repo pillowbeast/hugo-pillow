@@ -16,6 +16,8 @@
     }
   </style>
   <link rel="stylesheet" href='{{ "css/main.css" | absURL }}'>
+  {{ $defaultTheme := "/css/syntax_light.css" }}
+  <link id="syntax-theme" rel="stylesheet" href="{{ $defaultTheme }}">
   {{ $jscript := resources.Get "js/main.js" | js.Build | resources.Minify | resources.Fingerprint }}
   <script type="module" src="{{ $jscript.Permalink }}"></script>
 </head>

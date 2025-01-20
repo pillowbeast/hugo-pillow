@@ -39,6 +39,13 @@ You can change a lot of the theme's settings in the `hugo.toml` file.
 - social media links
 - ...
 
+## Code Highlighting
+Pillow comes with two styles, *rose-pine-dawn* for the light mode *nord* for the dark mode. If you want to change the syntax you have to modify the *syntax_light.css* and *syntax_dark.css*. For a gallery of different styles you can check-out: [Chroma style gallery](https://xyproto.github.io/splash/docs/all.html). To use a style run:
+
+```bash
+hugo gen chromastyles --style=<chosen-style> > themes/hugo-pillow/static/syntax_<light or dark>.css
+```
+
 # Content
 
 The following types of content are supported:

@@ -14,11 +14,33 @@ function attachToggles() {
     const moonIcon = toggleImage.getAttribute('data-moon');
     const sunIcon = toggleImage.getAttribute('data-sun');
 
+    // Check system preferences
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Get code css stylesheet
+    const syntaxHighlighting = document.getElementById('syntax-theme');
+
     if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('dark');
         toggleImage.src = moonIcon;
+        syntaxHighlighting.href = '/css/syntax_dark.css';
+        document.body.classList.add('dark');
+    } 
+    else if (localStorage.getItem('darkMode') === 'disabled') {
+        document.body.classList.remove('dark');
+        toggleImage.src = sunIcon;
+        syntaxHighlighting.href = '/css/syntax_light.css';
+    }
+    else if (prefersDarkMode) {
+        toggleImage.src = moonIcon;
+        localStorage.setItem('darkMode', 'enabled');
+        syntaxHighlighting.href = '/css/syntax_dark.css';
+        document.body.classList.add('dark');
+
     } else {
         toggleImage.src = sunIcon;
+        localStorage.setItem('darkMode', 'disabled');
+        syntaxHighlighting.href = '/css/syntax_light.css';
     }
 
     toggleMenu();
@@ -26,15 +48,12 @@ function attachToggles() {
         const isDarkMode = document.body.classList.toggle('dark');
         localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
         toggleImage.src = isDarkMode ? moonIcon : sunIcon;
+        syntaxHighlighting.href = isDarkMode ? '/css/syntax_dark.css' : '/css/syntax_light.css';
     });
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        document.body.classList.add('dark');
-    }
-    
+document.addEventListener('DOMContentLoaded', () => {    
     markActiveMenu();
     attachToggles();
     handleMoveButtons();
