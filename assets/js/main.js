@@ -3,6 +3,7 @@ import { handleGalleries } from './galleryslider.js';
 import { handleMoveButtons } from './moveButtons.js';
 import { handleOverlay } from './overlay.js';
 import { adjustH1Size } from './adjusth1size.js';
+import { handleCodeCopyButton } from './code_copy_button.js';
 
 console.log('Menu module loaded');
 
@@ -60,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleGalleries();
     handleOverlay();
     adjustH1Size();
+    handleCodeCopyButton();
 });
 
 
