@@ -1,0 +1,17 @@
+{{ $src := .Get "src" | default "https://drive.google.com/file/d/1vxbT9xg2WCyONSuEQeiazD4sGSJKNbj4/preview" }}
+{{ $width := .Get "width" | default "560" }}
+{{ $height := .Get "height" | default "315" }}
+{{ $frameborder := .Get "frameborder" | default "0" }}
+{{ $allow := .Get "allow" | default "autoplay; encrypted-media; fullscreen" }}
+{{ $sandbox := .Get "sandbox" | default "allow-scripts allow-same-origin" }}
+{{ $loading := .Get "loading" | default "lazy" }}
+
+<div style="width: 100%; display: flex; justify-content: center;">
+    <iframe src="{{ $src }}"
+        style="border-radius: 8px" width="{{ $width }}" height="{{ $height }}" 
+        frameborder="{{ $frameborder }}" 
+        allow="{{ $allow }}"
+        sandbox="{{ $sandbox }}"
+        loading="{{ $loading }}">
+    </iframe>
+</div>

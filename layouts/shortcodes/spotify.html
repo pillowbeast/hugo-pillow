@@ -12,19 +12,10 @@
     {{ end }}
 {{ end }}
 
-{{ $spotify_height := "152" }}
+{{ $spotify_height := "252" }}
 {{ with .Get "spotify_type" }}
     {{ if eq . "tall" }}
-        {{ $spotify_height = "352" }}
-    {{ else }}
-        {{ $spotify_height = "152" }}
-    {{ end }}
-{{ end }}
-
-{{ $spotify_height := "352" }}
-{{ with .Get "spotify_type" }}
-    {{ if eq . "tall" }}
-        {{ $spotify_height = "352" }}
+        {{ $spotify_height = "252" }}
     {{ else }}
         {{ $spotify_height = "152" }}
     {{ end }}
@@ -32,7 +23,8 @@
 
 {{ $link := printf "%s%s" $spotify_link $spotify_theme }}
 
-<iframe style="border-radius:{{ $spotify_border_radius }}" src="{{ $link }}" width="{{ $spotify_width }}"
-    height="{{ $spotify_height }}" frameBorder="0" allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+<iframe style="border-radius: {{ $spotify_border_radius }}" src="{{ $link }}" width="{{ $spotify_width }}"
+    height="{{ $spotify_height }}" frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+    sandbox="allow-scripts allow-same-origin  allow-presentation">
 </iframe>
