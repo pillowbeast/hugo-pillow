@@ -1,6 +1,7 @@
 ---
 title: "{{ replace (replace .Name "-" " ") "_" " " | title }}"
 date: {{ .Date }}
+lastmod: {{ .Date }}
 metadata:
   # readingTime: 10
   

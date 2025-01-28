@@ -4,8 +4,18 @@
 {{ $caption := .Get "caption" }}
 {{ $text := .Inner | markdownify }}
 {{ $title := .Page.Title }}
+{{ $maxwidth := .Get "max-width" | default "45%" }}
+{{ $maxwidth := printf "max-width: %s;" $maxwidth | safeCSS }}
 
-<div class="inline-img {{ $alignment }}">
+<style>
+  @media (min-width: 900px) {
+      .inline-img-{{ $index }} .img-container {
+          max-width: {{ $maxwidth }};
+      }
+  }
+  </style>
+
+<div class="inline-img {{ $alignment }} inline-img-{{ $index }}">
   <div class="img-container">
     {{ with .Page.Resources.GetMatch $image }}
     <img src="{{ .RelPermalink }}" alt="{{ $title }}">

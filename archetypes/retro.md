@@ -1,6 +1,7 @@
 ---
 title: "{{ replace (replace .Name "-" " ") "_" " " | title }}"
 date: {{ .Date }}
+lastmod: {{ .Date }}
 metadata:
   # readingTime: 15
 summary: "Write a brief summary of the month's highlights and lessons."

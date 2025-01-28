@@ -1,7 +1,7 @@
 ---
 title: "{{ replace (replace .Name "-" " ") "_" " " | title }}"
 date: {{ .Date }}
-
+lastmod: {{ .Date }}
 metadata:
   # readingTime: 15
   rating: "9/10"

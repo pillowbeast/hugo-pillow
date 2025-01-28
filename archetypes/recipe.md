@@ -1,7 +1,7 @@
 ---
 title: "{{ replace (replace .Name "-" " ") "_" " " | title }}"
 date: {{ .Date }}
-
+lastmod: {{ .Date }}
 metadata:
   rating: "8/10"
 summary: "Write a short description of the recipe here."
@@ -14,9 +14,14 @@ cookDetails:
   mealType: "Main Course"
   difficulty: "Easy"
 ingredients:
-  - { amount: "1 cup", name: "Ingredient 1" }
-  - { amount: "2 tbsp.", name: "Ingredient 2" }
-  - { amount: "500 g", name: "Ingredient 3" }
+  part1:
+    - { amount: "1 cup", name: "Ingredient 1" }
+    - { amount: "2 tbsp.", name: "Ingredient 2" }
+    - { amount: "500 g", name: "Ingredient 3" }
+  part2:
+    - { amount: "1 cup", name: "Ingredient 1" }
+    - { amount: "2 tbsp.", name: "Ingredient 2" }
+    - { amount: "500 g", name: "Ingredient 3" }
 steps:
   - "Step 1: Add details here."
   - "Step 2: Add details here."
@@ -33,16 +38,4 @@ tags: [Dinner, Pasta]
 
 Write a short introduction or story about the recipe here. Share its history, inspiration, or personal connection.
 
----
-
-## Ingredients
-
-{{< ingredients >}}
-
----
-
-## Instructions
-
-{{< steps >}}
-
-Write additional tips or variations of the recipe here.
+{{< recipe >}}

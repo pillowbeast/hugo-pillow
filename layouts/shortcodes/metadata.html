@@ -1,3 +1,5 @@
+{{ $gitinfo := .Page.GitInfo }}
+
 {{ with .Page.Params.categories }}
 <div class="tags-and-categories">
   <div class="tags">
@@ -35,15 +37,22 @@
 {{ end }}
 
 <div class="metadata-line">
-  {{ with .Page.Date }}
-  {{ $parsedDate := . | time }}
-  <div class="metadata-entry">
-    <div class="icon">
-      <img class="no-overlay" src='{{ "icons/calendar-solid.svg" | absURL }}' alt="Calendar-Date">
+  {{ with $gitinfo }}
+    <div class="metadata-entry">
+      <div class="icon">
+        <img class="no-overlay" src='{{ "icons/pencil-solid.svg" | absURL }}' alt="Last-Modified">
+      </div>
+      <p>{{ .AuthorDate.Format "2006-01-02" }}</p>
     </div>
-    <p>{{ .Format "02.01.2006" }}</p>
-  </div>
+  {{ else with .Page.Lastmod }}
+    <div class="metadata-entry">
+      <div class="icon">
+        <img class="no-overlay" src='{{ "icons/pencil-solid.svg" | absURL }}' alt="Last-Modified">
+      </div>
+      <p>{{ . | time.Format "02.01.2006" }}</p>
+    </div>
   {{ end }}
+
   {{ with .Page.Params.metadata.readingTime }}
   <div class="metadata-entry">
     <div class="icon">

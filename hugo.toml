@@ -28,8 +28,8 @@ baseURL = "https://pillowbeast.github.io/hugo-Pillow/"
 #     ShowPostNavLinks = true
 #     ShowBreadCrumbs = true
 #     ShowCodeCopyButtons = true
-
 ignoreLogs = ["warning-goldmark-raw-html"]
+enableGitInfo = true
 
 [markup]
     [markup.highlight]
@@ -39,3 +39,4 @@ ignoreLogs = ["warning-goldmark-raw-html"]
     [markup.goldmark]
         [markup.goldmark.renderer]
             unsafe = true
+
