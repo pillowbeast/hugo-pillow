@@ -13,6 +13,8 @@
         <div class="a-img">
             {{ with .Resources.GetMatch .Params.image }}
             <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
+            {{ else }}
+            <img src='{{ "documents/person.webp" | absURL }}' alt="Person">
             {{ end }}
         </div>
     </div>
@@ -41,11 +43,19 @@
             {{ end }}
             <div class="timeline-item">
                 <div class="last-dot">
-                    <div class="CV icon" id="jump-to-here">
-                        <a href='{{ "documents/CV.pdf" | absURL }}' target="_blank" rel="noopener noreferrer">
-                            <img src='{{ "icons/file-solid.svg" | absURL }}' alt="Download CV" class="no-overlay">
+                    {{ with .Resources.GetMatch .Params.cv_document }}
+                    <div class="CV icon primary-color" id="jump-to-here">
+                        <a href="{{ .RelPermalink }}" target="_blank" rel="noopener noreferrer">
+                            {{ readFile "static/icons/file-solid.svg" | safeHTML }}
                         </a>
                     </div>
+                    {{ else }}
+                    <div class="CV icon primary-color" id="jump-to-here">
+                        <a href='{{ "documents/CV.pdf" | absURL }}' target="_blank" rel="noopener noreferrer">
+                            {{ readFile "static/icons/file-solid.svg" | safeHTML }}
+                        </a>
+                    </div>
+                    {{ end }}
                 </div>
             </div>
         </div>

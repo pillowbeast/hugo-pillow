@@ -11,7 +11,7 @@ baseURL = "https://pillowbeast.github.io/hugo-Pillow/"
     [params.contact]
         name = "Pillowbeast"
         email = "pillowbeast@email.com"
-        phone = "+00 000 00 00"
+        # phone = "+00 000 00 00"
         adress = "Zurich, Switzerland"
     # Add your social media links here, these will be added to the footer.
     [params.profiles]
