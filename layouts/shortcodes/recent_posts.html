@@ -1,0 +1,11 @@
+<h2>Recent Posts</h2>
+{{ range first 10 (sort .Site.RegularPages "Date" "desc") }}
+<div class="post">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span class="type {{ .Section | lower }}-tag">
+        <a href='{{ "/" | relURL }}{{ .Section }}/'>{{ .Section }}</a>
+    </span>
+</div>
+{{ end }}
+
+<hr>
