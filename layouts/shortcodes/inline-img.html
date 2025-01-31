@@ -5,7 +5,6 @@
 {{ $text := .Inner | markdownify }}
 {{ $title := .Page.Title }}
 {{ $maxwidth := .Get "max-width" | default "45%" }}
-{{ $maxwidth := printf "max-width: %s;" $maxwidth | safeCSS }}
 
 <style>
   @media (min-width: 900px) {
@@ -13,7 +12,7 @@
           max-width: {{ $maxwidth }};
       }
   }
-  </style>
+</style>
 
 <div class="inline-img {{ $alignment }} inline-img-{{ $index }}">
   <div class="img-container">
