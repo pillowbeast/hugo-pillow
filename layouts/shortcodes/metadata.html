@@ -85,6 +85,14 @@
     <p>{{ . }}</p>
   </div>
   {{ end }}
+  {{ with .Page.Params.metadata.place }}
+  <div class="metadata-entry">
+    <div class="icon">
+      <img class="no-overlay" src='{{ "icons/location-dot-solid.svg" | absURL }}' alt="Rating">
+    </div>
+    <p>{{ . }}</p>
+  </div>
+  {{ end }}
 </div>
 
 <hr class="first-hr">
