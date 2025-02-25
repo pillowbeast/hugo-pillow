@@ -4,23 +4,28 @@
   <p class="page-summary">{{ .Page.Params.description }}</p>
   <hr class="first-hr">
 
-  {{ range (sort .Pages "Date" "desc") }}
+  {{ $totalPages := len .RegularPages }}
+  {{ range $index, $element := (sort .RegularPages "Date" "desc") }}
   <div class="blog-entry">
+
     <div class="blog-img">
-      {{ with .Resources.GetMatch .Params.image }}
+      {{ with $element.Resources.GetMatch $element.Params.image }}
       <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
       {{ else }}
       <p>No image found for {{ .Title }}</p>
       {{ end }}
     </div>
     <div class="blog-content">
-      <p class="blog-date">{{ .Date.Format "Jan 2006"}}</p>
-      <a href="{{ .RelPermalink }}">
-        <h2 class="blog-title">{{ .Title }}</h2>
+      <p class="blog-date">{{ $element.Date.Format "Jan 2006"}}</p>
+      <a href="{{ $element.RelPermalink }}">
+        <h2 class="blog-title">{{ $element.Title }}</h2>
       </a>
-      <p class="blog-summary">{{ .Summary }}</p>
+      <p class="blog-summary">{{ $element.Summary }}</p>
     </div>
   </div>
+  {{ if lt (add $index 1) ($totalPages) }}
+  <hr>
+  {{ end }}
   {{ end }}
 </div>
 

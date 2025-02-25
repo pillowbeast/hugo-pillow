@@ -1,9 +1,9 @@
 {{ define "main" }}
 <div class="main-container">
     <h1>{{ .Title }}</h1>
+    {{ if .Page.Params.subtitle }}
     <h2>{{ .Page.Params.subtitle }}</h2>
-    <!-- <p class="page-summary">{{ .Page.Params.description }}</p>
-    <hr class="first-hr"> -->
+    {{ end }}
     <div class="about-container">
         <div class="a-metadata">
             <h2>{{ .Site.Params.contact.name }}</h2>

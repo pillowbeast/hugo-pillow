@@ -1,7 +1,9 @@
 {{ define "main" }}
 <div class="main-container">
   <h1>{{ .Title }}</h1>
+  {{ if .Page.Params.subtitle }}
   <h2>{{ .Page.Params.subtitle }}</h2>
+  {{ end }}
   <p class="page-summary">{{ .Params.description | markdownify  }}</p>
 
   <div>{{ .Content }}</div>
