@@ -18,7 +18,9 @@ header {
     align-items: center;
 }
 
-.header-container p, .header-container b, .header-container a {
+.header-container p,
+.header-container b,
+.header-container a {
     font-family: var(--font-primary);
 }
 
@@ -110,12 +112,21 @@ header nav a:hover {
 /* =========== Section Tags =========== */
 .post {
     padding-left: var(--standard-space);
-    padding-bottom: var(--minimal-space);
+    padding-bottom: calc(var(--minimal-space)/2);
+    padding-top: calc(var(--minimal-space)/2);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     gap: 1.6rem;
+    width: 100%;
+}
+
+.post a {
+    max-width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 /* Style for section labels */
@@ -139,6 +150,30 @@ header nav a:hover {
 
 .post:hover {
     background-color: var(--secondary-color);
+}
+
+.book-tag a {
+    background-color: rgb(232, 112, 112);
+}
+
+.project-tag a {
+    background-color: rgb(127, 214, 214);
+}
+
+.retro-tag a {
+    background-color: rgb(137, 231, 157);
+}
+
+.blog-tag a {
+    background-color: rgba(183, 133, 230, 0.9);
+}
+
+.notes-tag a {
+    background-color: rgb(200, 198, 58);
+}
+
+.recipe-tag a {
+    background-color: rgb(236, 143, 61);
 }
 
 /* =========== MoveUpButton =========== */
@@ -216,7 +251,8 @@ main {
     justify-content: center;
 }
 
-@media (max-width: 900px), (max-aspect-ratio: 1 / 2) {
+@media (max-width: 900px),
+(max-aspect-ratio: 1 / 2) {
     .icon {
         width: 3.6rem;
         height: 3.6rem;
@@ -272,7 +308,8 @@ main {
     flex-direction: column;
 }
 
-.tags, .categories {
+.tags,
+.categories {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -284,28 +321,33 @@ main {
     content: "Tags: ";
 }
 
-.category, .tag {
+.category,
+.tag {
     display: flex;
     flex-direction: row;
     font-size: 1.2rem;
     white-space: nowrap;
 }
 
-.categories p, .tags p {
+.categories p,
+.tags p {
     padding: 0rem;
 }
 
-.tag a, .category a {
+.tag a,
+.category a {
     padding: 0.2rem 0.5rem;
     color: var(--primary-color);
 }
 
-.tag:hover, .category:hover {
+.tag:hover,
+.category:hover {
     background-color: var(--secondary-color);
     border-radius: 4px;
 }
 
-@media (max-width: 900px), (max-aspect-ratio: 1 / 2) {
+@media (max-width: 900px),
+(max-aspect-ratio: 1 / 2) {
     .metadata-line {
         width: auto;
         max-height: none;
@@ -356,6 +398,11 @@ main {
     flex: 0 0 auto;
 }
 
+/* Set by galleryslider.js while re-centering after a layout change. */
+.sliderimages.no-transition .image-wrapper {
+    transition: none;
+}
+
 .sliderimages img {
     width: auto;
     height: auto;
@@ -377,8 +424,6 @@ img.faded {
 
     font-size: 7.2rem;
     color: var(--primary-color);
-    /* background: var(--secondary-color); */
-    /* border-left: 2px solid var(--secondary-color); */
 }
 
 .next-button {
@@ -391,9 +436,6 @@ img.faded {
 
     font-size: 7.2rem;
     color: var(--primary-color);
-    /* background: var(--secondary-color); */
-    /* border: none; */
-    /* border-right: 8px solid var(--secondary-color); */
 
 }
 
@@ -409,7 +451,7 @@ img.faded {
     height: 3.6rem;
     bottom: 0%;
     right: 22%;
-    transform: translate(50%, -50%);
+    transform: translate(0%, -60%);
     background-color: none;
 
     display: flex;
@@ -436,10 +478,8 @@ img.faded {
 /* =========== Book Report Summary =========== */
 .book-report-tile {
     width: 100%;
-
     display: flex;
     gap: var(--enough-space);
-    overflow: hidden;
 }
 
 .book-report-container1 {
@@ -450,7 +490,6 @@ img.faded {
     justify-content: flex-start;
     align-items: flex-start;
     gap: var(--minimal-space);
-    overflow: hidden;
 }
 
 .book-report-metadata-line {
@@ -471,12 +510,12 @@ img.faded {
     text-overflow: ellipsis;
 
     margin-top: var(--standard-space);
-    /* margin-bottom: var(--standard-space); */
+    margin-bottom: var(--enough-space);
 }
 
 .book-report-summary p {
     padding: 0rem;
-    margin-bottom: var(--enough-space);
+    margin-bottom: 0rem;
 }
 
 
@@ -502,30 +541,29 @@ img.faded {
 
 .book-report-container2 {
     width: 38%;
-    /* margin: var(--minimal-space); */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 4px 4px 12px var(--primary-color);
+    max-height: 400px;
 }
 
 .book-report-img {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .book-report-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    max-width: 95%;
+    max-height: 95%;
+    box-shadow: 4px 4px 12px var(--primary-color);
 }
 
-@media (max-width: 900px), (max-width: 1250px) and (max-aspect-ratio: 1/2) {
+@media (max-width: 900px),
+(max-width: 1250px) and (max-aspect-ratio: 1/2) {
     .book-report-tile {
         width: 100%;
-
         display: flex;
         flex-direction: column-reverse;
         gap: var(--special-space)
@@ -538,10 +576,11 @@ img.faded {
 
     .book-report-container2 {
         width: 100%;
+        max-height: none;
     }
 
-    .book-report-img {
-        height: 35vh;
+    .book-report-img img {
+        max-height: 25vh;
     }
 }
 
@@ -621,7 +660,8 @@ img.faded {
     color: var(--secondary-color);
 }
 
-@media (max-width: 900px), (max-width: 1250px) and (max-aspect-ratio: 1/2) {
+@media (max-width: 900px),
+(max-width: 1250px) and (max-aspect-ratio: 1/2) {
     .recipe-tile {
         width: 100%;
         max-height: 25%;
@@ -752,8 +792,9 @@ img.faded {
     flex-direction: column;
 }
 
-@media (max-width: 900px), (max-width: 1250px) and (max-aspect-ratio: 1/1) {
-    
+@media (max-width: 900px),
+(max-width: 1250px) and (max-aspect-ratio: 1/1) {
+
     .r-metadata-container {
         flex-direction: column-reverse;
     }
@@ -762,7 +803,7 @@ img.faded {
     .r-img {
         width: 100%;
     }
-    
+
     .ingredients_and_steps {
         display: flex;
         flex-direction: column;
@@ -836,7 +877,8 @@ img.faded {
     font-style: italic;
 }
 
-@media (max-width: 900px), (max-width: 1250px) and (max-aspect-ratio: 1/2) {
+@media (max-width: 900px),
+(max-width: 1250px) and (max-aspect-ratio: 1/2) {
     .page-summary {
         font-size: 2.9rem;
     }
@@ -915,7 +957,14 @@ img.faded {
     padding-left: 0rem;
 }
 
-@media (max-width: 900px), (max-width: 1250px) and (max-aspect-ratio: 1/2){
+.blog-summary p {
+    padding: 0rem;
+    margin-bottom: 0rem;
+}
+
+
+@media (max-width: 900px),
+(max-width: 1250px) and (max-aspect-ratio: 1/2) {
     .blog-entry {
         width: 100%;
         height: auto;
@@ -1105,7 +1154,8 @@ img.faded {
     object-fit: cover;
 }
 
-@media (max-width: 900px), (max-width: 1250px) and (max-aspect-ratio: 1/1) {
+@media (max-width: 900px),
+(max-width: 1250px) and (max-aspect-ratio: 1/1) {
     .about-container {
         flex-direction: column-reverse;
     }
@@ -1267,25 +1317,19 @@ img.faded {
 
 .inline-img.left .img-container {
     float: left;
-    /* Floats the image to the left */
     padding-right: var(--enough-space);
-    /* Adds spacing between image and text */
-    /* max-width: 45%; */
 }
 
 .inline-img.right .img-container {
     float: right;
-    /* Floats the image to the right */
     padding-left: var(--enough-space);
-    /* Adds spacing between image and text */
-    /* max-width: 40%; */
 }
 
 .img-container img {
-    width: 100%;
-    max-height: 50vh;
+    max-width: 100%;
+    max-height: 80vh;
     overflow: hidden;
-    object-fit: cover;
+    object-fit: contain;
     filter: saturate(1.0);
     cursor: pointer;
 }
@@ -1304,6 +1348,11 @@ img.faded {
     padding-left: 0rem;
 }
 
+.img-container img+p {
+    width: 0;
+    min-width: 100%;
+}
+
 .inline-img.left .img-container p {
     text-align: left;
 }
@@ -1312,28 +1361,10 @@ img.faded {
     text-align: right;
 }
 
-@media (max-width: 900px), (max-width: 1250px) and (max-aspect-ratio: 1.2/2) {
-    .inline-img.left .img-container,
-    .inline-img.right .img-container {
-        float: none;
-        width: 100%;
-        max-width: 100%;
-        text-align: left;
-        padding: 0rem;
-    }
-
-    .inline-img.right .img-container p {
-        text-align: left;
-    }
-
-    .inline-img {
-        overflow: visible;
-        /* Reset overflow for stacking */
-    }
-
-    .inline-img p {
-        padding-left: 0rem;
-    }
+.inline-img.right .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* =========== Banner-Image =========== */
@@ -1391,12 +1422,15 @@ img.faded {
     cursor: pointer;
 }
 
+.overlay-image-container {
+    width: 70vw;
+    height: 70vh;
+}
+
 .image-overlay img {
-    max-width: 90%;
-    max-height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    filter: saturate(1.0);
-    scale: 1.0;
 }
 
 .image-overlay img:hover {
@@ -1413,6 +1447,7 @@ img.faded {
 }
 
 .bullet p {
+    font-size: 1.49rem;
     padding: 0rem;
 }
 

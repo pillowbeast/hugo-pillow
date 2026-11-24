@@ -2,15 +2,14 @@
 <div class="main-container">
   <h1>{{ .Page.Title }}</h1>
   <p class="page-summary">{{ .Page.Params.description }}</p>
-  <hr class="first-hr">
+  <hr class="first-hr" />
 
-  {{ $totalPages := len .RegularPages }}
-  {{ range $index, $element := (sort .RegularPages "Date" "desc") }}
+  {{ $totalPages := len .RegularPages }} {{ range $index, $element := (sort
+  .RegularPages "Date" "desc") }}
   <div class="blog-entry">
-
     <div class="blog-img">
       {{ with $element.Resources.GetMatch $element.Params.image }}
-      <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
+      <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
       {{ else }}
       <p>No image found for {{ .Title }}</p>
       {{ end }}
@@ -20,13 +19,14 @@
       <a href="{{ $element.RelPermalink }}">
         <h2 class="blog-title">{{ $element.Title }}</h2>
       </a>
-      <p class="blog-summary">{{ $element.Summary }}</p>
+      <div class="blog-summary">
+        <p>{{ .Summary }}</p>
+      </div>
     </div>
   </div>
   {{ if lt (add $index 1) ($totalPages) }}
-  <hr>
-  {{ end }}
-  {{ end }}
+  <hr />
+  {{ end }} {{ end }}
 </div>
 
 {{ end }}

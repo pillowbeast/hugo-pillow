@@ -6,25 +6,40 @@ body {
 }
 
 /* =========== Fonts =========== */
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-primary);
   line-height: 0.85;
 }
 
-p, li, ol, i, b, a {
+p,
+li,
+ol,
+i,
+b,
+a,
+td {
   font-family: var(--font-secondary);
 }
 
-p a{
+.cl {
+  font-size: var(--small-space);
+}
+
+p a {
   font-size: 2.4rem;
   color: var(--primary-color);
 }
 
 /* Remove extra line spacing caused by sup */
 sup {
-  line-height: 0; /* Prevents the superscript from increasing line height */
+  line-height: 0;
+  /* Prevents the superscript from increasing line height */
   vertical-align: super;
-  margin-left: 0.1em; /* Adds a small space before the superscript for readability */
+  margin-left: 0.1em;
+  /* Adds a small space before the superscript for readability */
 }
 
 sup a {
@@ -33,7 +48,7 @@ sup a {
 
 /* =========== Writing =========== */
 h1 {
-  font-size: 18.2rem;
+  font-size: var(--extra-special-space);
   font-weight: 700;
   overflow: hidden;
 }
@@ -69,7 +84,8 @@ h4 {
 p,
 li,
 ol,
-i {
+i,
+td {
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 1.2;
@@ -80,7 +96,8 @@ b {
   font-weight: 500;
 }
 
-a {
+a,
+th {
   font-size: 3.9rem;
   font-weight: 500;
   text-decoration: none;
@@ -116,7 +133,8 @@ a b {
   p,
   li,
   ol,
-  i {
+  i,
+  td {
     font-size: 2.2rem;
     font-weight: 400;
     line-height: 1.2;
@@ -171,7 +189,6 @@ ul {
 }
 
 ul p {
-  font-size: 1.49rem;
   padding: 0rem;
   padding-bottom: var(--minimal-space);
 }
@@ -203,7 +220,6 @@ ol li::marker {
 }
 
 ol p {
-  font-size: 1.49rem;
   padding: 0rem;
 }
 
@@ -231,7 +247,6 @@ a b:hover {
 
 .quote {
   line-height: 1.4;
-  /* font-size: 3.3rem; */
   padding-top: var(--standard-space);
   padding-left: calc(2*var(--enough-space));
   padding-right: var(--enough-space);
@@ -309,25 +324,76 @@ img:hover {
   font-size: var(--standard-space);
 }
 
+table {
+  margin: 0 var(--enough-space) var(--enough-space) var(--enough-space);
+  border-radius: 2px;
+  border: 1px solid var(--text-color);
+  box-shadow: 1px 1px 4px var(--text-color);
+  border-spacing: 0;
+
+  th {
+    padding: var(--minimal-space);
+    padding-bottom: 0;
+    border-bottom: 1px solid rgba(123, 84, 60, 0.5);
+    background-color: rgba(201, 191, 191, 0.1);
+  }
+
+  th:first-child {
+    padding-left: var(--minimal-space);
+  }
+
+  th:last-child {
+    padding-right: var(--minimal-space);
+    border-right: none;
+  }
+
+  td {
+    padding: var(--minimal-space);
+    border-bottom: 1px solid rgba(123, 84, 60, 0.5);
+  }
+
+  td:last-child {
+    border-right: none;
+  }
+
+  tbody>tr:last-child {
+    td {
+      padding-bottom: calc(2*var(--minimal-space));
+      border-bottom: none;
+    }
+  }
+
+  tbody>tr:nth-child(2n - 1) {
+    background-color: rgba(100, 20, 20, 0.1);
+  }
+
+  tbody>tr:nth-child(2n) {
+    background-color: rgba(201, 191, 191, 0.1);
+  }
+}
+
+
+
 /* =========== Code =========== */
 .highlight div {
   border-radius: 0.5rem;
 }
 
 pre {
-  margin: 1rem;
   border-radius: 0.5rem;
 }
 
 code {
   position: relative;
   font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
 }
 
 .chroma {
-  padding: 2.4rem; /* Adjust padding as needed */
-  border-radius: 5px; /* Optional: Rounded corners */
-  overflow-x: auto; /* Prevent horizontal overflow for long lines */
+  padding: var(--minimal-space);
+  border-radius: 5px;
+  overflow-x: auto;
 }
 
 details {
@@ -350,6 +416,13 @@ summary::marker {
   color: var(--background-color);
   border-radius: 0 0 0 5px;
   cursor: pointer;
+  opacity: 0;
+}
+
+pre:hover {
+  .code-copy-button {
+    opacity: 1;
+  }
 }
 
 /* =========== Attributes =========== */
